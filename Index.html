@@ -7,8 +7,19 @@
 	<body ng-app="myApp">
 
 	  <div ng-controller="mainController">
-			<h1>{{framework}}</h1>
 
+			<h1>{{framework}}</h1>
+			<img ng-src="{{angularImage}}">
+
+			<div ng-repeat="varList in list">
+				<p> Name: {{varList.name | uppercase}} </p> <!-- | uppercase is a filter -->
+				<p> What is?: {{varList.whatIs}} </p>
+				<p> Number: {{varList.number}} </p>
+				<p> Syntax: {{varList.syntax}} </p>
+				<p> ------------------------------------- </p>
+				<p ng-click="plus()">Click Me!</p>
+			</div>
+			<p>{{total}}</p>
 
 		</div>
 
